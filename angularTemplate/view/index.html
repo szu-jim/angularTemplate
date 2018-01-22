@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+
+<body id="low_bg" ng-controller="mainCtrl">
+<div id="stars_box" style="height: 0"></div>
+
+<nav class="navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="active">
+        <li><a href="#home" class="{{curTab == 'home' ? 'on' : ''}}">主页</a></li>
+        <li><a href="#page1" class="{{curTab == 'page1' ? 'on' : ''}}">配置页</a></li>
+        <li><a href="#page2" class="{{curTab == 'page2' ? 'on' : ''}}">生成报告</a></li>
+        <li><a href="#page3" class="{{curTab == 'page3' ? 'on' : ''}}">报告统计</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userId}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../view/sign.html#/in">登陆</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="javascript:void(0)" ng-click="loginout()">注销</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div ng-view class="container-fluid"></div>
+
+<div class="footer">
+  <hr />
+  <div class="footer-copyright">©</div>
+</div>
+
+<script src="../js/lib/jquery.min.js"></script>
+<script src="../js/lib/bootstrap.min.js"></script>
+<script src="../js/lib/angular.js"></script>
+<script src="../js/lib/angular-route.min.js"></script>
+<script src="../js/lib/angular-cookies.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/home.js"></script>
+<script src="../js/page1.js"></script>
+<script src="../js/page2.js"></script>
+<script src="../js/page3.js"></script>
+<script src="../js/star.js"></script>
+<script src="../js/lib/highcharts.js"></script>
+
+</body>
+</html>

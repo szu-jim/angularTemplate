@@ -1,0 +1,42 @@
+<div class="login_box">
+	<div class="row center" style="color: #fff">
+		<div class="col-sm-8 col-sm-offset-2">
+			<h1>
+				<strong><a href="index.html#/">安全测试平台</a></strong>
+			</h1>
+			<div class="description">
+				<p>欢迎登陆安全测试平台</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="form-top">
+				<div class="form-top-left">
+					<h3>登陆</h3>
+					<p>请输入你的办公电脑开机账号和密码:</p>
+				</div>
+				<div class="form-top-right">
+					<i class="fa fa-key"></i>
+				</div>
+			</div>
+			<div class="form-bottom">
+				<form role="form" method="post" class="login-form" name="signinForm">
+				
+					<div class="form-group">
+						<label class="sr-only" for="form-username">Username</label> <input
+							type="text"  placeholder="办公电脑开机账号..."
+							class="form-username form-control" id="name" ng-model="signin.name" name="name" ng-maxlength="100" required autofocus maxlength="100">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-password">Password</label> <input
+							type="password" placeholder="办公电脑开机密码..."
+							class="form-password form-control" id="password" name="password" ng-model="signin.password" required>
+					</div>
+					<button type="button" class="btn btn-primary" ng-click="signinSubmit(signinForm.$valid)">登陆</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
